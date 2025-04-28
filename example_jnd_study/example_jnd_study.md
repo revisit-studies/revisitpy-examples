@@ -2,7 +2,7 @@
 
 In this example, we'll create a full two-alternative forced choice (2AFC) study for visualizations of correlated data (from [1]), using vega components. We'll use numpy and scipy to generate a dataset, pandas to create a well-structured data frame, and the `revisitpy` package to tie it all together.
 
-You'll see that we have a section which uses the `revisitpy` Widget. This widget is a fully interactive jupyter notebook widget which allows us to preview the created study directly in the notebook. You'll notice that we also utilize the `revisitpy_server` package. This is to simplify the process of viewing our widget. Specifically, it removes the requirement of having a version of the reVISit repository running locally on your computer.
+You'll see that we have a section which uses the `revisitpy` Widget. This widget is a fully interactive jupyter notebook widget which allows us to preview the created study directly in the notebook. You'll notice that we also utilize the `revisitpy-server` package. This is to simplify the process of viewing our widget. Specifically, it removes the requirement of having a version of the reVISit repository running locally on your computer.
 
 [1] Harrison, Lane, Fumeng Yang, Steven Franconeri, and Remco Chang. "Ranking visualizations of correlation using weber's law." IEEE transactions on visualization and computer graphics 20, no. 12 (2014): 1943-1952.
 
@@ -363,11 +363,11 @@ study = rvt.studyConfig(
 
 ```
 
-# Using `revisitpy_server` to Prepare Our Widget
+# Using `revisitpy-server` to Prepare Our Widget
 
 The `revisitpy` package provides a widget in order to preview our study directly in a Jupyter notebook. We can interact with the study, check that vega signals work, and even create some introductory data ourselves. In order for the widget to work, a local copy of the reVISit must be running on your local computer. If you already have reVISit locally (colloqioully our `study` repo), then all you need to do is navigate to your repository and run `yarn serve`. After this, the widget we create in this jupyter notebook will be useable.
 
-A simpler way to achieve the same goal, however is using the `revisitpy_server` Python package. This is a simple python package which already has the most recent reVISit repository built and runs a server locally. After installing `revisitpy_server`, all that is required is the following:
+A simpler way to achieve the same goal, however is using the `revisitpy-server` Python package. This is a simple python package which already has the most recent reVISit repository built and runs a server locally. After installing `revisitpy-server`, all that is required is the following:
 
 
 ```python
@@ -380,7 +380,7 @@ Server is running in the background at http://localhost:8080
 ```
 # The Widget
 
-Now that your server is running, we create the widget with the configuration file we created above. When calling the widget, we are assuming that the assets referenced in the configuration file are relative to this notebook. The widget then copies these static assets to the appropriate directory. Since we're currently using the `revisitpy_server` package, you'll see that they copied into the assets of the local virtual environment `revisitpy_server` package.
+Now that your server is running, we create the widget with the configuration file we created above. When calling the widget, we are assuming that the assets referenced in the configuration file are relative to this notebook. The widget then copies these static assets to the appropriate directory. Since we're currently using the `revisitpy-server` package, you'll see that they copied into the assets of the local virtual environment `revisitpy-server` package.
 
 
 ```python

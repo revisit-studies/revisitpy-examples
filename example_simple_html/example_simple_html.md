@@ -232,11 +232,11 @@ print(study)
 ```
 # Visualizing the Study
 
-Now that we have the study completed, let's use the widget to visualize this. We'll start by using the `revisitpy_server` package to run a local copy of the reVISit repo.
+Now that we have the study completed, let's use the widget to visualize this. We'll start by using the `revisitpy-server` package to run a local copy of the reVISit repo.
 
 ## Running the Server
 
-Simply import the `revisitpy_server` package and call `rs.serve()`. We set the return value of `rs.serve()` to `process` so that we can terminate the process afterwards if desired.
+Simply import the `revisitpy-server` package and call `rs.serve()`. We set the return value of `rs.serve()` to `process` so that we can terminate the process afterwards if desired.
 
 
 ```python
@@ -250,7 +250,7 @@ Server is running in the background at http://localhost:8080
 ```
 ## Launching The Widget
 
-Launching the widget is also straightforward -- especially when using the `revisitpy_server` package.
+Launching the widget is also straightforward -- especially when using the `revisitpy-server` package.
 
 
 ```python
