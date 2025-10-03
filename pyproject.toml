@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "altair[all]>=5.5.0",
     "jupyter>=1.1.1",
-    "revisitpy>=2.2.0",
+    "revisitpy>=2.2.1",
     "revisitpy-server>=1.10.0",
     "scipy>=1.15.1",
     "seaborn>=0.13.2",

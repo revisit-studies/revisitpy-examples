@@ -29,7 +29,7 @@ ui_config = rvt.uiConfig(
     withProgressBar=True,
     autoDownloadStudy=False,
     autoDownloadTime=5000,
-    sidebar=False
+    withSidebar=False
 )
 ```
 
@@ -47,12 +47,17 @@ response_one = rvt.response(
     required=True
 )
 
+correct_answer = rvt.answer(
+    id='barChart',
+    answer='A'
+)
 base_component = rvt.component(
     component_name__='bar-chart',
     type='website',
     response=[response_one],
     path="./assets/bar-chart-interaction.html",
-    instructionLocation='aboveStimulus'
+    instructionLocation='aboveStimulus',
+    correctAnswer=[correct_answer],
 )
 ```
 
@@ -142,6 +147,12 @@ print(study)
             "type": "markdown"
         },
         "bar-chart-1": {
+            "correctAnswer": [
+                {
+                    "answer": "A",
+                    "id": "barChart"
+                }
+            ],
             "description": "A trial for the user to click the largest bar",
             "instruction": "Click on the largest bar",
             "instructionLocation": "aboveStimulus",
@@ -169,6 +180,12 @@ print(study)
             "type": "website"
         },
         "bar-chart-2": {
+            "correctAnswer": [
+                {
+                    "answer": "A",
+                    "id": "barChart"
+                }
+            ],
             "description": "A trial for the user to click the smallest bar",
             "instruction": "Click on the smallest bar",
             "instructionLocation": "aboveStimulus",
@@ -225,8 +242,8 @@ print(study)
         "contactEmail": "contact@revisit.dev",
         "helpTextPath": "./assets/help.md",
         "logoPath": "./assets/revisitLogoSquare.svg",
-        "sidebar": false,
-        "withProgressBar": true
+        "withProgressBar": true,
+        "withSidebar": false
     }
 }
 ```
@@ -250,19 +267,31 @@ Server is running in the background at http://localhost:8080
 ```
 ## Launching The Widget
 
-Launching the widget is also straightforward -- especially when using the `revisitpy-server` package.
+Launching the widget is also straightforward -- especially when using the `revisitpy_server` package.
 
 
 ```python
 w = rvt.widget(study, server=True)
 # In your own Jupyter notebook, calling `w` will now display the widget in a fully interactive manner.
-# w
+w
 ```
 **Output:**
 ```output
-Copying file from ./assets/introduction.md to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/introduction.md
-Copying file from ./assets/bar-chart-interaction.html to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/bar-chart-interaction.html
-Copying file from ./assets/bar-chart-interaction.html to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/bar-chart-interaction.html
-Copying file from ./assets/help.md to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/help.md
-Copying file from ./assets/revisitLogoSquare.svg to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/revisitLogoSquare.svg
+Copying file from ./assets/introduction.md to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/introduction.md
+Copying file from ./assets/bar-chart-interaction.html to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/bar-chart-interaction.html
+Copying file from ./assets/bar-chart-interaction.html to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/bar-chart-interaction.html
+Copying file from ./assets/help.md to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/help.md
+Copying file from ./assets/revisitLogoSquare.svg to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/revisitLogoSquare.svg
 ```
+
+```python
+w
+```
+
+
+
+**Output:**
+```output
+Widget(config={'$schema': 'https://raw.githubusercontent.com/revisit-studies/study/v2.0.0/src/parser/StudyConf…
+```
+
