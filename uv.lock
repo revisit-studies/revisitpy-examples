@@ -317,7 +317,7 @@ name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
 wheels = [
@@ -533,7 +533,7 @@ name = "ipykernel"
 version = "6.29.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "appnope", marker = "platform_system == 'Darwin'" },
+    { name = "appnope", marker = "sys_platform == 'darwin'" },
     { name = "comm" },
     { name = "debugpy" },
     { name = "ipython" },
@@ -1659,33 +1659,33 @@ dependencies = [
 requires-dist = [
     { name = "altair", extras = ["all"], specifier = ">=5.5.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "revisitpy", specifier = ">=1.4.0" },
-    { name = "revisitpy-server", specifier = ">=1.5.0" },
+    { name = "revisitpy", specifier = ">=2.2.0" },
+    { name = "revisitpy-server", specifier = ">=1.10.0" },
     { name = "scipy", specifier = ">=1.15.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
 ]
 
 [[package]]
 name = "revisitpy"
-version = "1.4.0"
+version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anywidget" },
     { name = "pandas" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c2/c1/5743bc7540705d00e3067cd2601808c6a732c8a6b595f262fbc7fcda2e08/revisitpy-1.4.0.tar.gz", hash = "sha256:cc9a3bd6ca998dc4a6342545ae7f3b9169f55ff15bb3180069a0c2ebb1b9566a", size = 106972 }
+sdist = { url = "https://files.pythonhosted.org/packages/5b/af/056f28c486ee360b7bb3947ce0caa249aa519d8df2fbe8d9d96f9c7dcf5f/revisitpy-2.2.0.tar.gz", hash = "sha256:e5779ab85c8ce473531bd1373fe3872b92d92fc74ac71d0ed548bea9953e4c4d", size = 114548 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e1/4d/d49b25ba014f52abde327a04176604529d838dd6cb3333fa7a19cbf264f2/revisitpy-1.4.0-py2.py3-none-any.whl", hash = "sha256:05b5c68e2e5680131164974736a2008ef71d1344e840e23c38ed87945567f326", size = 103137 },
+    { url = "https://files.pythonhosted.org/packages/3f/34/7d0d660db634f5d0ec3dbae5281dcb902a7ba08f4c47ea26dbb4f4efe39b/revisitpy-2.2.0-py2.py3-none-any.whl", hash = "sha256:81625fa921479563b121c9b61cdaec0a2d4e0c3202dee75117055051520f070c", size = 110778 },
 ]
 
 [[package]]
 name = "revisitpy-server"
-version = "1.8.0"
+version = "1.10.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/2e/9c/0f573c2f4b8512b3bdcb174fd57d6add2bf4bfaab6c46f5cf23b8b1d0472/revisitpy_server-1.8.0.tar.gz", hash = "sha256:c3e622400da1d0e5309395700d434e710003a9c035f896b9eb554a53a8e547d6", size = 53809748 }
+sdist = { url = "https://files.pythonhosted.org/packages/41/93/f813e9c417eb789c1af53916e800746fc7eddfda983db345d8921f062d4c/revisitpy_server-1.10.0.tar.gz", hash = "sha256:15ce55c42d2514a21f31ec6ebeedb1f64ad4806cd5021193315d50163119d662", size = 68495332 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/37/77/815cfc53ef3943b5efa832b502ea79f301426021703e4e9514b4a7da4ea6/revisitpy_server-1.8.0-py2.py3-none-any.whl", hash = "sha256:9202aab148aea926642e04d90d0a9131dd19048020b0fd8605fbc02ee3062564", size = 53979722 },
+    { url = "https://files.pythonhosted.org/packages/5b/44/d0c848c829b141035ece2dff45f91ab49fe2a2e940583c8d466407458f3a/revisitpy_server-1.10.0-py2.py3-none-any.whl", hash = "sha256:4c50eccec3af6172c73988af6a48ac25e9717936e7d9a832251e6d2123e07297", size = 68726142 },
 ]
 
 [[package]]
