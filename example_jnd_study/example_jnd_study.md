@@ -28,7 +28,7 @@ study_metadata = rvt.studyMetadata(
 ui_config = rvt.uiConfig(
   contactEmail="briancbollen@gmail.com",
   logoPath="./assets/revisitLogoSquare.svg",
-  sidebar=True,
+  withSidebar=True,
   withProgressBar=False,
   nextOnEnter=True
 )
@@ -184,9 +184,12 @@ def create_scatter_plot(data1, data2):
 test_data_1 = pd.DataFrame({'X':[0.1,0.3,0.6], 'Y':[0.3,0.3,0.4]})
 test_data_2 = pd.DataFrame({'X':[0.1,0.1,0.3], 'Y':[0.4,0.9,0.2]})
 
+
+
 # Display chart
-# chart = create_scatter_plot(test_data_1,test_data_2)
 chart = create_parallel_plot(test_data_1,test_data_2)
+
+chart = create_scatter_plot(test_data_1,test_data_2)
 chart
 ```
 
@@ -313,8 +316,534 @@ def component_function(visType=None, numPoints=None, corrValues=None):
 
 # You can print the output of our component function with some test values.
 
-# print(component_function('scatterPlot',20,corrValues=[0.2,0.9]))
+print(component_function('scatterPlot',20,corrValues=[0.2,0.9]))
 ```
+**Output:**
+```output
+{
+    "config": {
+        "$schema": "https://vega.github.io/schema/vega/v5.json",
+        "background": "white",
+        "padding": 5,
+        "height": 300,
+        "data": [
+            {
+                "name": "data-52bc544cbe1b66fc6d1cfa3c8bd6b63b",
+                "values": [
+                    {
+                        "X": 0.3745401188473625,
+                        "Y": 0.5848980586751905
+                    },
+                    {
+                        "X": 0.9507143064099162,
+                        "Y": 0.23258526709157396
+                    },
+                    {
+                        "X": 0.731993941811405,
+                        "Y": 0.3400579498804509
+                    },
+                    {
+                        "X": 0.5986584841970366,
+                        "Y": 0.38796395653346505
+                    },
+                    {
+                        "X": 0.15601864044243646,
+                        "Y": 0.37816577736494833
+                    },
+                    {
+                        "X": 0.15599452033620265,
+                        "Y": 0.7162121373077122
+                    },
+                    {
+                        "X": 0.05808361216819946,
+                        "Y": 0.12714886796347585
+                    },
+                    {
+                        "X": 0.8661761457749352,
+                        "Y": 0.6012817498493731
+                    },
+                    {
+                        "X": 0.6011150117432088,
+                        "Y": 0.6103703768165778
+                    },
+                    {
+                        "X": 0.7080725777960455,
+                        "Y": 0.06217248053115154
+                    },
+                    {
+                        "X": 0.020584494295802447,
+                        "Y": 0.4439534240834385
+                    },
+                    {
+                        "X": 0.9699098521619944,
+                        "Y": 0.28877540578462235
+                    },
+                    {
+                        "X": 0.8324426408004217,
+                        "Y": 0.09846636958628537
+                    },
+                    {
+                        "X": 0.21233911067827616,
+                        "Y": 0.9252725977052384
+                    },
+                    {
+                        "X": 0.18182496720710067,
+                        "Y": 0.945387972654482
+                    },
+                    {
+                        "X": 0.18340450985343387,
+                        "Y": 0.7498107129967089
+                    },
+                    {
+                        "X": 0.30424224295953767,
+                        "Y": 0.27315585177462204
+                    },
+                    {
+                        "X": 0.5247564316322378,
+                        "Y": 0.10449481925905252
+                    },
+                    {
+                        "X": 0.43194501864211576,
+                        "Y": 0.6684346194802712
+                    },
+                    {
+                        "X": 0.2912291401980419,
+                        "Y": 0.3983965186542427
+                    }
+                ]
+            },
+            {
+                "name": "data-d57e58214395ff171b2491da3f0d292f",
+                "values": [
+                    {
+                        "X": 0.3745401188473625,
+                        "Y": 0.4348622911772477
+                    },
+                    {
+                        "X": 0.9507143064099162,
+                        "Y": 0.8448862247319627
+                    },
+                    {
+                        "X": 0.731993941811405,
+                        "Y": 0.624939821352325
+                    },
+                    {
+                        "X": 0.5986584841970366,
+                        "Y": 0.5303024684004034
+                    },
+                    {
+                        "X": 0.15601864044243646,
+                        "Y": 0.16904228272782973
+                    },
+                    {
+                        "X": 0.15599452033620265,
+                        "Y": 0.2858028531432235
+                    },
+                    {
+                        "X": 0.05808361216819946,
+                        "Y": 0.03742992179068483
+                    },
+                    {
+                        "X": 0.8661761457749352,
+                        "Y": 0.844518242799563
+                    },
+                    {
+                        "X": 0.6011150117432088,
+                        "Y": 0.6302458967537943
+                    },
+                    {
+                        "X": 0.7080725777960455,
+                        "Y": 0.40538408107697554
+                    },
+                    {
+                        "X": 0.020584494295802447,
+                        "Y": 0.042836686483037734
+                    },
+                    {
+                        "X": 0.9699098521619944,
+                        "Y": 0.899113106236165
+                    },
+                    {
+                        "X": 0.8324426408004217,
+                        "Y": 0.582257504094003
+                    },
+                    {
+                        "X": 0.21233911067827616,
+                        "Y": 0.4975297605607123
+                    },
+                    {
+                        "X": 0.18182496720710067,
+                        "Y": 0.4903452221669415
+                    },
+                    {
+                        "X": 0.18340450985343387,
+                        "Y": 0.3328265335479937
+                    },
+                    {
+                        "X": 0.30424224295953767,
+                        "Y": 0.24704101238766368
+                    },
+                    {
+                        "X": 0.5247564316322378,
+                        "Y": 0.30552979527864166
+                    },
+                    {
+                        "X": 0.43194501864211576,
+                        "Y": 0.5218340707130752
+                    },
+                    {
+                        "X": 0.2912291401980419,
+                        "Y": 0.2875845031310437
+                    }
+                ]
+            },
+            {
+                "name": "data_0",
+                "source": "data-52bc544cbe1b66fc6d1cfa3c8bd6b63b",
+                "transform": [
+                    {
+                        "type": "filter",
+                        "expr": "isValid(datum[\"X\"]) && isFinite(+datum[\"X\"]) && isValid(datum[\"Y\"]) && isFinite(+datum[\"Y\"])"
+                    }
+                ]
+            },
+            {
+                "name": "data_1",
+                "source": "data-d57e58214395ff171b2491da3f0d292f",
+                "transform": [
+                    {
+                        "type": "filter",
+                        "expr": "isValid(datum[\"X\"]) && isFinite(+datum[\"X\"]) && isValid(datum[\"Y\"]) && isFinite(+datum[\"Y\"])"
+                    }
+                ]
+            }
+        ],
+        "signals": [
+            {
+                "name": "childWidth",
+                "value": 300
+            }
+        ],
+        "layout": {
+            "padding": 100,
+            "bounds": "full",
+            "align": "each"
+        },
+        "marks": [
+            {
+                "type": "group",
+                "name": "concat_0_group",
+                "style": "cell",
+                "encode": {
+                    "update": {
+                        "width": {
+                            "signal": "childWidth"
+                        },
+                        "height": {
+                            "signal": "height"
+                        },
+                        "stroke": [
+                            {
+                                "signal": "revisitAnswer.response === 'left' ? 'blue' : null"
+                            }
+                        ],
+                        "strokeWidth": {
+                            "signal": "revisitAnswer.response === 'left' ? 3 : 0"
+                        }
+                    }
+                },
+                "marks": [
+                    {
+                        "name": "concat_0_marks",
+                        "type": "symbol",
+                        "style": [
+                            "point"
+                        ],
+                        "from": {
+                            "data": "data_0"
+                        },
+                        "encode": {
+                            "update": {
+                                "opacity": {
+                                    "value": 0.7
+                                },
+                                "fill": {
+                                    "value": "black"
+                                },
+                                "stroke": {
+                                    "value": "black"
+                                },
+                                "ariaRoleDescription": {
+                                    "value": "point"
+                                },
+                                "description": {
+                                    "signal": "\"X: \" + (format(datum[\"X\"], \"\")) + \"; Y: \" + (format(datum[\"Y\"], \"\"))"
+                                },
+                                "x": {
+                                    "scale": "concat_0_x",
+                                    "field": "X"
+                                },
+                                "y": {
+                                    "scale": "concat_0_y",
+                                    "field": "Y"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "axes": [
+                    {
+                        "scale": "concat_0_x",
+                        "orient": "bottom",
+                        "grid": false,
+                        "domain": true,
+                        "labels": false,
+                        "ticks": false,
+                        "labelFlush": true,
+                        "labelOverlap": true,
+                        "tickCount": {
+                            "signal": "ceil(childWidth/40)"
+                        },
+                        "zindex": 0
+                    },
+                    {
+                        "scale": "concat_0_y",
+                        "orient": "left",
+                        "grid": false,
+                        "domain": true,
+                        "labels": false,
+                        "ticks": false,
+                        "labelOverlap": true,
+                        "tickCount": {
+                            "signal": "ceil(height/40)"
+                        },
+                        "zindex": 0
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "name": "concat_1_group",
+                "style": "cell",
+                "encode": {
+                    "update": {
+                        "width": {
+                            "signal": "childWidth"
+                        },
+                        "height": {
+                            "signal": "height"
+                        },
+                        "stroke": [
+                            {
+                                "signal": "revisitAnswer.response === 'right' ? 'blue' : null"
+                            }
+                        ],
+                        "strokeWidth": {
+                            "signal": "revisitAnswer.response === 'right' ? 3 : 0"
+                        }
+                    }
+                },
+                "marks": [
+                    {
+                        "name": "concat_1_marks",
+                        "type": "symbol",
+                        "style": [
+                            "point"
+                        ],
+                        "from": {
+                            "data": "data_1"
+                        },
+                        "encode": {
+                            "update": {
+                                "opacity": {
+                                    "value": 0.7
+                                },
+                                "fill": {
+                                    "value": "black"
+                                },
+                                "stroke": {
+                                    "value": "black"
+                                },
+                                "ariaRoleDescription": {
+                                    "value": "point"
+                                },
+                                "description": {
+                                    "signal": "\"X: \" + (format(datum[\"X\"], \"\")) + \"; Y: \" + (format(datum[\"Y\"], \"\"))"
+                                },
+                                "x": {
+                                    "scale": "concat_1_x",
+                                    "field": "X"
+                                },
+                                "y": {
+                                    "scale": "concat_1_y",
+                                    "field": "Y"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "axes": [
+                    {
+                        "scale": "concat_1_x",
+                        "orient": "bottom",
+                        "grid": false,
+                        "domain": true,
+                        "labels": false,
+                        "ticks": false,
+                        "labelFlush": true,
+                        "labelOverlap": true,
+                        "tickCount": {
+                            "signal": "ceil(childWidth/40)"
+                        },
+                        "zindex": 0
+                    },
+                    {
+                        "scale": "concat_1_y",
+                        "orient": "left",
+                        "grid": false,
+                        "domain": true,
+                        "labels": false,
+                        "ticks": false,
+                        "labelOverlap": true,
+                        "tickCount": {
+                            "signal": "ceil(height/40)"
+                        },
+                        "zindex": 0
+                    }
+                ]
+            }
+        ],
+        "scales": [
+            {
+                "name": "concat_0_x",
+                "type": "linear",
+                "domain": {
+                    "data": "data_0",
+                    "field": "X"
+                },
+                "range": [
+                    0,
+                    {
+                        "signal": "childWidth"
+                    }
+                ],
+                "nice": true,
+                "zero": true
+            },
+            {
+                "name": "concat_0_y",
+                "type": "linear",
+                "domain": {
+                    "data": "data_0",
+                    "field": "Y"
+                },
+                "range": [
+                    {
+                        "signal": "height"
+                    },
+                    0
+                ],
+                "nice": true,
+                "zero": true
+            },
+            {
+                "name": "concat_1_x",
+                "type": "linear",
+                "domain": {
+                    "data": "data_1",
+                    "field": "X"
+                },
+                "range": [
+                    0,
+                    {
+                        "signal": "childWidth"
+                    }
+                ],
+                "nice": true,
+                "zero": true
+            },
+            {
+                "name": "concat_1_y",
+                "type": "linear",
+                "domain": {
+                    "data": "data_1",
+                    "field": "Y"
+                },
+                "range": [
+                    {
+                        "signal": "height"
+                    },
+                    0
+                ],
+                "nice": true,
+                "zero": true
+            }
+        ],
+        "config": {
+            "style": {
+                "cell": {
+                    "strokeWidth": 0
+                }
+            },
+            "signals": [
+                {
+                    "name": "revisitAnswer",
+                    "value": {},
+                    "on": [
+                        {
+                            "events": "@concat_0_group:click",
+                            "update": "{responseId: 'vegaDemoResponse1', response: 'left'}"
+                        },
+                        {
+                            "events": "@concat_1_group:click",
+                            "update": "{responseId: 'vegaDemoResponse1', response: 'right'}"
+                        },
+                        {
+                            "events": {
+                                "source": "window",
+                                "type": "keydown"
+                            },
+                            "update": "event.key === 'ArrowLeft' ? {responseId: 'vegaDemoResponse1', response: 'left'} : event.key === 'ArrowRight' ? {responseId: 'vegaDemoResponse1', response: 'right'} : revisitAnswer"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "response": [
+        {
+            "id": "vegaDemoResponse1",
+            "location": "sidebar",
+            "prompt": "You Selected: ",
+            "required": true,
+            "type": "reactive"
+        }
+    ],
+    "type": "vega"
+}
+```
+
+```python
+data1 = pd.DataFrame(
+    generate_correlated_data_uniform(0.2, 100, seed=42),
+    columns=['X', 'Y']
+)
+data2 = pd.DataFrame(
+    generate_correlated_data_uniform(0.9, 100, seed=42),
+    columns=['X', 'Y']
+)
+chart = create_parallel_plot(data1, data2)
+chart
+```
+
+
+
+
+    
+![png](example_jnd_study_files/example_jnd_study_10_0.png)
+    
+
+
 
 # Permuting the Final Sequence 
 
@@ -333,8 +862,6 @@ combinations = itertools.combinations(range(1, 11), 2)
 
 # Create the dataset with values divided by 10
 dataSet = [{'corrValues': [x / 10, y / 10]} for x, y in combinations]
-# Create the dataset with values divided by 10
-
 
 main_sequence = rvt.sequence(order='fixed')
 
@@ -358,7 +885,7 @@ study = rvt.studyConfig(
     sequence=sequence
 )
 
-# Prints the entire configuration file which is approximately 150,000 lines of JSON
+# Prints the entire configuration file which is approximately 230,000 lines of JSON
 # print(study)
 
 ```
@@ -387,13 +914,21 @@ Now that your server is running, we create the widget with the configuration fil
 w = rvt.widget(study, server=True)
 
 # In your own Jupyter notebook, calling `w` will now display the widget in a fully interactive manner.
-# w
+w
 ```
 **Output:**
 ```output
-Copying file from ./assets/introduction.md to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/introduction.md
-Copying file from ./assets/revisitLogoSquare.svg to /Users/bbollen23/revisit-py-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/revisitLogoSquare.svg
+Copying file from ./assets/introduction.md to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/introduction.md
+Copying file from ./assets/revisitLogoSquare.svg to /Users/jwilburn/Projects/revisitpy-examples/.venv/lib/python3.12/site-packages/revisitpy_server/static/__revisit-widget/assets/revisitLogoSquare.svg
 ```
+
+
+**Output:**
+```output
+Widget(config={'$schema': 'https://raw.githubusercontent.com/revisit-studies/study/v2.0.0-rc1/src/parser/Study…
+```
+
+
 # Optional: Data Collection
 
 Now that we have the widget running, we can check out some sample data that would be generated from a user. Start by going through a small portion of the study. Once you've gone through the desired number of components inside the widget, navigate to the analysis dashboard using the 'Analysis' tab in the upper left-hand corner. Here you'll see individual participants and the data that they've generated. 
@@ -402,8 +937,35 @@ From here, we can export this data back into our Jupyter notebook. Start by clic
 
 
 ```python
-w.get_df()
+df = w.get_df()
 ```
+
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+filtered_df = df[df['trialId'].str.startswith(('parallelCoords-', 'scatterPlot-'))].copy()
+
+filtered_df['visType'] = filtered_df['trialId'].apply(
+    lambda x: 'parallelCoordinates' if x.startswith('parallelCoords-') 
+    else 'scatterPlot' if x.startswith('scatterPlot-') 
+    else x
+)
+
+sns.violinplot(x='visType', y='duration', data=filtered_df)
+plt.title('Duration by Visualization Type')
+plt.xlabel('Visualization Type')
+plt.ylabel('Duration')
+plt.show()
+```
+
+
+    
+![png](example_jnd_study_files/example_jnd_study_19_0.png)
+    
+
 
 # Optional: Terminate the server
 
@@ -412,4 +974,9 @@ Closing the notebook will automatically terminate the server. If you'd rather do
 
 ```python
 process.terminate()
+```
+
+
+```python
+
 ```

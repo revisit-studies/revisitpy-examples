@@ -10,6 +10,12 @@ uv sync
 
 This will create the virtual environment. When running a jupyter notebook, use the `ipykernel` that is in the `.venv` directory when prompted.
 
+You can then run the notebooks in the `example_jnd_study` folder as follows:
+
+```bash
+uv run jupyter notebook example_jnd_study/example_jnd_study.ipynb
+```
+
 # Development
 
 ## Creating Markdown files
